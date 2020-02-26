@@ -1,0 +1,10 @@
+@import "~src/assets/variables.scss";
+
+.addButton {
+  position: fixed;
+  bottom: 3px;
+  right: 3px;
+  background: $color_1;
+  border-radius: 50%;
+  color: white;
+}

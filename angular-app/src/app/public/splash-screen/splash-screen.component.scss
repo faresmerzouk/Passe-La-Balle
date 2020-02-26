@@ -1,0 +1,68 @@
+@import "~src/assets/variables.scss";
+
+#top,
+#bottom {
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: 50%;
+}
+
+#top {
+    top: 0;
+    background-color: $color_1;
+}
+
+#bottom {
+    bottom: 0;
+    background-color: $color_2;
+}
+
+.or-seperator {
+	margin: 17px 0 -2px;
+	text-align: center;
+	border-top: 1px solid $color_2;
+	width: 99%;
+}
+.or-seperator i {
+	padding: 0 10px;
+	background: $color_2;
+	position: relative;
+	top: -11px;
+    z-index: 1;
+    
+}
+
+.or-seperator1 {
+	margin: 17px 0 -2px;
+	text-align: center;
+	border-top: 1px solid $color_1;
+	width: 99%;
+}
+.or-seperator1 i {
+	padding: 0 10px;
+	background: $color_1;
+	position: relative;
+	top: -11px;
+    z-index: 1;
+    
+}
+
+
+#container {
+    width: 640px; 
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+}
+
+.center {
+    margin: 89px 79px 0px;
+    width: 60%;
+    padding: 10px;
+    
+  }
+
+ 
+  

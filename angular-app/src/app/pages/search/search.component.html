@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="header">
+    <button mat-icon-button (click)="goToLastPage()" >
+      <fa-icon [icon]="faArrow"></fa-icon>
+    </button> <h5 class="title">Rechercher une activité</h5>
+  </div>
+  <div class="">
+    <form [formGroup]="searchForm" (ngSubmit)="onFormSubmit()">
+      <div class="form-group">
+        <fa-icon [icon]="faRunning" class="icons"></fa-icon>
+        <mat-form-field class="full-width">
+          <input type="text" matInput placeholder="Activité sportive" formControlName="sportName" id="sportName" required="required">
+        </mat-form-field>
+        <br>
+        <fa-icon [icon]="faMap" class="icons"></fa-icon>
+        <mat-form-field class="full-width">
+          <input type="text" matInput placeholder="Lieu" formControlName="placeName" id="placeName" required="required">
+        </mat-form-field>
+        <br>
+        <fa-icon [icon]="faCalendar" class="icons"></fa-icon>
+        <mat-form-field class="full-width">
+          <input matInput [matDatepicker]="myDatepicker" [min]="startDate" placeholder="Date" formControlName="eventDate" id="eventDate" required="required">
+          <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+          <mat-datepicker #myDatepicker></mat-datepicker>
+        </mat-form-field>
+        <br>
+        <fa-icon [icon]="faClock" class="icons"></fa-icon>
+        <mat-form-field class="width-time">
+          <input type="text" matInput placeholder="Heure" formControlName="eventTimeHours" id="eventTimeHours" required="required">
+        </mat-form-field>
+        <mat-form-field class="width-time">
+          <input type="text" matInput placeholder="Minutes" formControlName="eventTimeMinutes" id="eventTimeMinutes" required="required">
+        </mat-form-field>
+        <div *ngIf="errors.invalid"
+             class="alert alert-danger">
+          <div *ngIf="errors.sportName.errors.required || errors.placeName.errors.required || errors.eventDate.errors.required || errors.eventTimeHours.errors.required || errors.eventTimeMinutes.errors.required">
+            Un ou plusieurs champs manquants.
+          </div>
+        </div>
+        <br>
+        <button mat-flat-button class="full-width-button">Rechercher</button>
+      </div>
+    </form>
+  </div>
+</div>
+<app-burger-menu></app-burger-menu>

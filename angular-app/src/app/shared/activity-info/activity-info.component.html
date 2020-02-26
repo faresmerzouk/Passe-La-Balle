@@ -1,0 +1,17 @@
+<div class="activity-container row">
+  <div class="activity-left col-6">
+    <div class="activity-content">
+      {{sport}}
+    </div>
+  </div>
+  <div class="activity-right col-6">
+    <div class="activity-content">
+      <fa-icon [icon]="faMapMarkerAlt"></fa-icon>
+      {{place}}
+    </div>
+    <div class="activity-content">
+      <fa-icon [icon]="faClock"></fa-icon>
+      {{newDate | date : 'dd/MM/yyyy - HH:mm'}}
+    </div>
+  </div>
+</div>

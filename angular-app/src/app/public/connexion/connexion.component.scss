@@ -1,0 +1,57 @@
+@import "~src/assets/variables.scss";
+
+.col-12  {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin: .0rem;
+}
+
+.md-icon{
+	font-family: 'Material Icons' !important;
+}
+
+  .material-icons {
+	color: $color_1;
+ }
+
+ input{
+	color: $color_1;
+ }
+
+ .or-seperator {
+	margin: 70px 0 10px;
+	text-align: center;
+	border-top: 1px solid $color_1;
+	width: 99%;
+}
+.or-seperator i {
+	padding: 0 10px;
+	background: $color_2;
+	position: relative;
+	top: -11px;
+	z-index: 1;
+}
+
+
+div + div{
+	margin-bottom:50px;
+ }
+
+ i + div{
+	margin-bottom:50px;
+ }
+#qt {
+	margin-right:100px;
+}
+
+#i1 {
+    margin: 25px;
+    padding: -50px;
+    display: block;
+}
+
+.material-icons{
+line-height: 2;
+}
+

@@ -1,0 +1,65 @@
+@import "~src/assets/variables.scss";
+
+.icons{
+  color: $color_1;
+  margin-right: 1px;
+}
+
+.titParticipants {
+  width: 95%;
+  background-color: $color_2;
+  color: white;
+  padding-bottom: 3px;
+  padding-top: 3px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 3px 3px 3px 3px;
+}
+
+.comment {
+  margin-left: 5px;
+}
+
+.header {
+  //text-align: center;
+}
+
+.header > * {
+  display: inline-block;
+  padding: 30px;
+  background-color: white;
+  color: $color_1;
+}
+
+.title {
+  color: $color_1;
+}
+
+.textComponent {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.separator {
+  display: block;
+  height: 2px;
+  border: 0;
+  border-top: 2px solid $color_1;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  padding: 0;
+  width: 95%;
+}
+
+.full-width {
+  width: 93%;
+}
+
+.full-width-button {
+  width: 95%;
+  color: white;
+  margin-top: 15px;
+  background-color: $color_1;
+}

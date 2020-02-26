@@ -1,0 +1,42 @@
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Compiled and minified JavaScript -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
+<div class="row">
+   <div class="col-12">
+      <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+      <a [routerLink]=""  (click)="btnClick('/splashscreen')">
+      <i id="i1" style="float: left;" class="material-icons">&#xE5C4;</i>
+      </a>
+      <div id="qt" class="col-12">
+         <a href="#" class="btn btn-danger btn-block"><i class="fa fa-google"></i> SE CONNECTER AVEC <b>Google</b></a>
+      </div>
+      <div class="or-seperator"><i>OU</i></div>
+      <div class="row" *ngIf="authError">
+         <div class="col-12 alert alert-danger">{{ authError?.message }}</div>
+      </div>
+      <div class="row">
+         <div class="col-12">
+            <i class="material-icons">&#xE853;</i>
+          <input ngModel #email="ngModel" name="email" type="email"  placeholder="Email" class="form-control">
+        </div>
+      </div>
+      <div class="row">
+         <div class="col-12">
+            <i class="material-icons">&#xE0DA;</i>
+            <input ngModel #password="ngModel" name="password" type="password" placeholder="Mot de passe" class="form-control">
+         </div>
+      </div>
+      <div class="row mt-2">
+         <div class="col-12">
+         </div>
+         <div class="col-12">
+            <button class="btn btn-primary btn-lg btn-block" type="submit">SE CONNECTER</button>
+         </div>
+      </div>
+      </form>
+   </div>
+</div>

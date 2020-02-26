@@ -1,0 +1,65 @@
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Compiled and minified JavaScript -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+   rel="stylesheet">
+<script src="https://code.iconify.design/1/1.0.3/iconify.min.js"></script>
+<div class="row mt-4">
+   <div class="col">
+      <a [routerLink]=""  (click)="btnClick('/splashscreen')">
+      <i id="i1" style="float: left;" class="material-icons">&#xE5C4;</i>
+      </a>
+      <h2>  Inscription</h2>
+   </div>
+   <div class="col-12">
+      <div class="row" *ngIf="authError">
+         <div class="col-12 alert alert-danger">
+            {{ authError?.message }}
+         </div>
+      </div>
+      <form #userRegForm="ngForm" (ngSubmit)="createUser(userRegForm)">
+        <div class="row">
+          <div class="col">
+            <i class="material-icons">&#xE853;</i>
+            <input ngModel #firstname="ngModel" name="firstName" type="text" class="form-control" id="firstName" placeholder="Nom d'utilisateur">
+          </div>
+
+        </div>
+        <div class="row">
+        <div class="col">
+          <i class="material-icons">&#xE853;</i>
+          <input ngModel #lastname="ngModel" name="lastName" type="text" class="form-control" id="lastName" value="" placeholder="Prenom d'utilisateur">
+        </div>
+      </div>
+      <div class="row">
+         <div class="col">
+            <i class="material-icons">
+            mail_outline
+            </i>
+            <input ngModel #email="ngModel" name="email" type="email" class="form-control" placeholder="Email">
+         </div>
+      </div>
+      <div>
+         <div class="row">
+            <div class="col">
+               <i class="material-icons">&#xE0DA;</i>
+               <input ngModel #password="ngModel" name="password" type="password" class="form-control" placeholder="Mot de passe">
+            </div>
+         </div>
+         <div class="row">
+            <div class="col">
+               <i class="material-icons">&#xE0DA;</i>
+               <input name="password" type="password" class="form-control" placeholder="Confirmation -Mot de passe">
+            </div>
+         </div>
+         <div class="row">
+            <div class="col">
+               <button class="btn btn-primary btn-lg btn-block" type="submit">S'inscrire</button>
+            </div>
+         </div>
+      </div>
+      </form>
+   </div>
+</div>

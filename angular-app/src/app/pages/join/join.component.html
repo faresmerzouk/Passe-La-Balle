@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="header">
+    <button mat-icon-button (click)="goToLastPage()" >
+      <fa-icon [icon]="faArrow"></fa-icon>
+    </button> <h5 class="title">Rejoindre une activité</h5>
+  </div>
+  <div class="textComponent">
+    Récapitulatif sur l'activité que vous rejoignez
+  </div>
+  <div class="row">
+    <div class="col-6"><fa-icon [icon]="faRunning" class="icons"></fa-icon> {{activity.sport}}</div>
+    <div class="col-6"><fa-icon [icon]="faMap" class="icons"></fa-icon> {{activity.lieu}}</div>
+  </div>
+  <div class="row">
+    <div class="col-6"><fa-icon [icon]="faCalendar" class="icons"></fa-icon> {{activity.datetime['seconds']*1000 | date : 'dd/MM/yyyy'}}</div>
+    <div class="col-6"><fa-icon [icon]="faClock" class="icons"></fa-icon> {{activity.datetime['seconds']*1000 | date : 'HH:mm'}}</div>
+  </div>
+  <div class="row">
+    <div class="col-6"><fa-icon [icon]="faClock" class="icons"></fa-icon> {{activity.duree}} minutes</div>
+  </div>
+  <div class="separator"></div>
+  <div class="comment">
+    <fa-icon [icon]="faEdit" class="icons"></fa-icon>{{activity.commentaire}}
+  </div>
+  <div class="titParticipants">Participants</div>
+  <div *ngFor="let participant of PARTICIPANTS">
+    <fa-icon [icon]="faUser" class="icons"></fa-icon> {{participant.name}}
+  </div>
+  <button mat-flat-button class="full-width-button" (click)="joinActivity()">Rejoindre</button>
+</div>
+<app-burger-menu></app-burger-menu>

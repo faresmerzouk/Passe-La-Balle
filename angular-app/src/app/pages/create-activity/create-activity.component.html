@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="header">
+    <button mat-icon-button (click)="goToLastPage()" >
+      <fa-icon [icon]="faArrow"></fa-icon>
+    </button> <h5 class="title">Créer une activité</h5>
+  </div>
+  <div class="textComponent">
+    Récapitulatif sur l'activité que vous créez
+  </div>
+  <div class="row">
+    <div class="col-6"><fa-icon [icon]="faRunning" class="icons"></fa-icon> {{this.activity.sport}}</div>
+    <div class="col-6"><fa-icon [icon]="faMap" class="icons"></fa-icon> {{this.activity.lieu}}</div>
+  </div>
+  <div class="row">
+    <div class="col-6"><fa-icon [icon]="faCalendar" class="icons"></fa-icon> {{this.activity.datetime | date : 'dd/MM/yyyy'}}</div>
+    <div class="col-6"><fa-icon [icon]="faClock" class="icons"></fa-icon> {{this.activity.datetime | date : 'HH:mm'}}</div>
+  </div>
+  <div class="separator"></div>
+  <form [formGroup]="addForm" (ngSubmit)="onFormSubmit()">
+    <div class="form-group">
+      <div class="textComponent">
+        Informations complémentaires
+      </div>
+      <fa-icon [icon]="faClock" class="icons"></fa-icon>
+      <mat-form-field class="full-width">
+        <input type="text" matInput placeholder="Durée de l'activité (en minutes)" formControlName="during" id="during" required="required">
+      </mat-form-field>
+      <br>
+      <fa-icon [icon]="faEdit" class="icons"></fa-icon>
+      <mat-form-field class="full-width">
+        <textarea type="text" matInput placeholder="Commentaires" formControlName="comment" id="comment"></textarea>
+      </mat-form-field>
+      <br>
+      <div *ngIf="errors.invalid"
+           class="alert alert-danger">
+        <div *ngIf="errors.during.errors.required">
+          Le champ "durée" est manquant.
+        </div>
+      </div>
+      <br>
+      <button mat-flat-button class="full-width-button">Créer</button>
+    </div>
+  </form>
+</div>
+<app-burger-menu></app-burger-menu>

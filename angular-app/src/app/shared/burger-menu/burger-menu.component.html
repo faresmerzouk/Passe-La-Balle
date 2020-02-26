@@ -1,0 +1,14 @@
+<div class="burgerMenu">
+  <mat-menu #burgerMenu="matMenu" yPosition="above" class="burgerInside">
+    <button mat-menu-item (click)="btnClickLogout()">Déconnexion</button>
+    <!--<button mat-menu-item (click)="btnClick('/pages/params')">Paramètres</button>-->
+    <button mat-menu-item (click)="btnClick('/pages/profile')">Profil</button>
+    <!--<button mat-menu-item (click)="btnClick('/pages/home')">Favoris</button>
+    <button mat-menu-item (click)="btnClick('/pages/home')">Contacts</button>-->
+    <button mat-menu-item (click)="btnClick('/pages/search')">Recherche</button>
+    <button mat-menu-item (click)="btnClick('/pages/home')">Accueil</button>
+  </mat-menu>
+  <button mat-icon-button [matMenuTriggerFor]="burgerMenu" class="burger">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+</div>

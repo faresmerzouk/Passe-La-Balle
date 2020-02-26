@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="header">
+    <button mat-icon-button (click)="goToLastPage()" >
+      <fa-icon [icon]="faArrow"></fa-icon>
+    </button> <h5 class="title">Résultats de la recherche</h5>
+  </div>
+  <div class="listResult">
+    <app-activity-info
+      *ngFor="let activity of join"
+      [place]="activity.name"
+      [date]="activity.date"
+      [sport]="activity.sport"
+      (click)="navigateTo('/pages/join', activity.id)"
+    ></app-activity-info>
+  </div>
+    <agm-map
+    [latitude]="latitudeCenter"
+    [longitude]="longitudeCenter"
+
+    [zoom]="zoom"
+    [backgroundColor]="backgroundColor"
+    [fullscreenControl]="true"
+    [mapDraggable]="false"
+    [keyboardShortcuts]="false"
+    [gestureHandling]="null"
+    [mapTypeControl]="false"
+    [streetViewControl]="false"
+    >
+
+    <agm-marker
+      *ngFor="let j of join"
+      [latitude]="j.geocodeLat"
+      [longitude]="j.geocodeLng"
+      [animation]="animation"
+      [title] = "j.name"
+    ></agm-marker>
+
+    <agm-marker
+      *ngFor="let j of create"
+      [latitude]="j.geocodeLat"
+      [longitude]="j.geocodeLng"
+      [animation]="animation"
+      [title] = "j.name"
+      (markerClick)="addActivity(j.name, j.placeId)"
+    ></agm-marker>
+
+    </agm-map>
+</div>
+<app-burger-menu></app-burger-menu>

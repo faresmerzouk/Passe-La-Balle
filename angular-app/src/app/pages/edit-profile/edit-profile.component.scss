@@ -1,0 +1,42 @@
+@import '~src/assets/variables.scss';
+
+
+.header > * {
+  display: inline-block;
+  padding: 30px;
+  background-color: white;
+  color: $color_1;
+}
+
+.avatar{
+  color: $color_1;
+}
+
+.title{
+  color: $color_1;
+  text-align: center;
+}
+
+.headerButton{
+  border: none;
+}
+
+.profil{
+  text-align: center;
+}
+
+.mail {
+  font-style: italic;
+  font-size: 12px;
+}
+
+.validateButton{
+  width: 98%;
+  margin-right: 5px;
+  margin-left: 5px;
+  color: white;
+  background-color: $color_1;
+  bottom: 3px;
+  position: absolute;
+}
+

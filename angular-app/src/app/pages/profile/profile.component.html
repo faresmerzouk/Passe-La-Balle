@@ -1,0 +1,26 @@
+<div class="header">
+  <button class="headerButton" (click)="btnClick('/pages/home')">
+    <fa-icon [icon]="faHome" class="icons" size="2x"></fa-icon>
+  </button>
+  <h5 class="title">Profil</h5>
+  <button class="headerButton" (click)="btnClick('/pages/editProfile')">
+    <fa-icon [icon]="faCogs" class="icons" size="2x"></fa-icon>
+  </button>
+</div>
+
+<div class="profil">
+  <div class="info">
+    <fa-icon [icon]="faUserCircle" class="avatar" size="7x"></fa-icon>
+    <h1 class="nomPrenom" >{{this.userName}}</h1>
+    <h2 class="mail">{{this.userMail}}</h2>
+  </div>
+  <div class="sportList">
+    <table class="sportTab">
+      <tr class="sportLine">
+        <td class="leftCell">Basket Ball</td>
+        <td class="rightCell">Pro</td>
+      </tr>
+    </table>
+  </div>
+</div>
+<app-burger-menu></app-burger-menu>

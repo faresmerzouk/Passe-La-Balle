@@ -1,0 +1,20 @@
+<div class="header">
+  <button class="headerButton" (click)="btnClickPages('/pages/profile')">
+    <fa-icon [icon]="faArrowLeft" class="icons" size="2x"></fa-icon>
+  </button>
+  <h5 class="title">Profil</h5>
+</div>
+<form [formGroup]="editProfileForm" (ngSubmit)="btnClickSubmit()">
+  <div class="profil">
+    <div class="info">
+      <fa-icon [icon]="faUserCircle" class="avatar" size="7x"></fa-icon>
+      <h1 class="nomPrenom" >{{this.userName}}</h1>
+      <h2 class="mail">{{this.userMail}}</h2>
+      <input type="text" id="name" placeholder="Nouveau Nom" formControlName="newName">
+      <input type="text" id="mail" placeholder="Nouveau Mail" formControlName="newMail">
+      <input type="password" id="pwd" placeholder="Nouveau Mot de passe" formControlName="newPwd">
+      <input type="password" id="confpwd" placeholder="Confirmation nouveau mot de passe" formControlName="confNewPwd">
+    </div>
+  </div>
+  <button mat-flat-button class="validateButton">Modifier</button>
+</form>

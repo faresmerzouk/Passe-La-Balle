@@ -1,0 +1,8 @@
+<app-burger-menu></app-burger-menu>
+<app-activity-info
+  *ngFor="let activity of activities"
+  [place]="activity.lieu"
+  [date]="activity.datetime"
+  [sport]="activity.sport"
+></app-activity-info>
+<app-add-button [path]="'/pages/search'" [icon]="faPlus"></app-add-button>

@@ -1,0 +1,43 @@
+@import "~src/assets/variables.scss";
+
+.header {
+  text-align: left;
+}
+
+.header > * {
+  display: inline-block;
+  padding: 30px;
+  background-color: white;
+  color: $color_1;
+}
+
+.title{
+  color: $color_1;
+}
+
+.container {
+  //margin: 10px;
+}
+
+.full-width {
+  width: 90%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.width-time {
+  width: 45%;
+  margin-left: 5px;
+}
+
+.full-width-button {
+  width: 98%;
+  margin-right: 5px;
+  margin-left: 5px;
+  color: white;
+  background-color: $color_1;
+}
+
+.icons{
+  color: $color_1;
+}
